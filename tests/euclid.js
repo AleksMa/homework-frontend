@@ -28,4 +28,10 @@ QUnit.module('Тестируем функцию euclid', function () {
 		const temp = [ 80325, 55275, 8746650, 3000000, 45672375, 225, 54675 ];
 		assert.strictEqual(euclid(...[ ...temp, ...temp, ...temp, ...temp, ...temp ]), euclid(...temp));
 	});
+
+	// Custom tests
+	QUnit.test('Совсем не необычные тесты :)', function (assert) {
+		assert.strictEqual(euclid(75, 30, 45, 20055), 15, 'euclid(75, 30, 45, 20055) === 15');
+		assert.strictEqual(euclid(1337, 1942661, 155092), 1337, 'euclid(1337, 1942661, 155092) === 1337');
+	});
 });
