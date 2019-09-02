@@ -34,4 +34,9 @@ QUnit.module('Тестируем функцию euclid', function () {
 		assert.strictEqual(euclid(75, 30, 45, 20055), 15, 'euclid(75, 30, 45, 20055) === 15');
 		assert.strictEqual(euclid(1337, 1942661, 155092), 1337, 'euclid(1337, 1942661, 155092) === 1337');
 	});
+
+	QUnit.test('Неопознанные объекты', function (assert) {
+		assert.strictEqual(euclid('some string', 'another string'), 'Unexpected types. Expected: number');
+		assert.strictEqual(euclid(2.0, 1337, true), 'Unexpected types. Expected: number');
+	});
 });
